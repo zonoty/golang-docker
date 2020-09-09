@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw「
+
+  golang-docker:
+    build:
+      context: .
+      target: builder
+    volumes:
+      - ./:/app
+    command: air
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql
