@@ -1,5 +1,3 @@
-# Ototoru API
-
 ## Get started
 
 ```bash
